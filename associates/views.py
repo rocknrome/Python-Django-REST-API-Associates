@@ -6,3 +6,5 @@ class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
     permission_classes = [permissions.AllowAny]
+
+    http_method_names = ['get', 'post', 'put', 'delete']
